@@ -6,7 +6,7 @@ class arrayFnc
 	public function __construct()
 	{
 	}
-
+	//Search and return matched array based off $key=>$value
 	public function search($array,$key,$val)
 	{
 		//(string) Array key we will be working with
