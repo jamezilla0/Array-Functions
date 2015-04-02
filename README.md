@@ -1,5 +1,5 @@
 # Array-Functions
-> I will be building array functions that will make working with arrays allot easier. One of my main concern is efficiancy and [spesision] (Being specific and percise with my methods and objects).
+> I will be building array functions that will make working with arrays allot easier. One of my main concern is efficiancy and **spesision** (Being specific and percise with my methods and objects).
 
 > I will be writting this in PHP using OOP structure.
 
