@@ -36,7 +36,7 @@ class arrayFnc
 				}
 			}
 			//if we are going deeper
-			if(isset($goDeeper))
+			if((isset($goDeeper)) || (!$check))
 			{
 				//map the array to check each subarray for a match
 				array_map(array($this, "matchCheck"), $array);
