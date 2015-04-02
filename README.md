@@ -10,9 +10,7 @@
 $array = new arrayFnc();
 ```
 
-# Core Functions
-
->
+# Core Function
 ```php
 	//Search and return matched array based off $key=>$value
 	public function search($array,$key,$val)
@@ -21,7 +19,6 @@ $array = new arrayFnc();
 		$this->key = $key;
 		//Key value that we need.
 		$this->val = $val;
-
 		//Check if the passed in array is in fact an array
 		if(is_array($array))
 		{
