@@ -1,7 +1,7 @@
 # Array-Functions
-> A couple of array functions that I persornaly use when enumerating over array data. Much nicer then taking up sql      resource. I use it with preloaded data, when I need to effect angular an angular scope.
+> I will be building array functions that will make working with arrays allot easier. One of my main concern is efficiancy and [spesision] (Being specific and percise with my methods and objects).
 
-> I will be adding more functions to this class as my ussage increases.
+> I will be writting this in PHP using OOP structure.
 
 # Constructing
 
