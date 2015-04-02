@@ -1,14 +1,16 @@
 # Array-Functions
-A couple of array functions that I persornaly use when enumerating over array data. Much nicer then taking up sql resource. I use it with preloaded data, when I need to effect angular an angular scope.
+> A couple of array functions that I persornaly use when enumerating over array data. Much nicer then taking up sql      resource. I use it with preloaded data, when I need to effect angular an angular scope.
 
-Constructing
+> I will be adding more functions to this class as my ussage increases.
 
-$array = new arrayFnc();
+# Constructing
+> $array = new arrayFnc();
 
-Ussage
+#Ussage
 
-//Search
-$array->search($against,$key,$val);
+##Search
+
+> $array->search($against,$key,$val);
 
 $against = array you will search agaisnt.
 $key = which array key should we target.
