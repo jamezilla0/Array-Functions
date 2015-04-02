@@ -1,49 +1,25 @@
-<?php
-class arrayFnc
+public function search($array,$key,$val)
 {
-	public $result = array();
-	
-	public function __construct()
-	{
-	}
+//(string) Array key we will be working with
+$this->key = $key;
+//Key value that we need.
+$this->val = $val;
 
-	public function search($array,$key,$val)
-	{
-		$this->key = $key;
-		$this->val = $val;
-		
-		echo "Looking for $key => $val";
-		
-		if(is_array($array))
-		{
-			if($array[$this->key] == $this->val)
-			{
-				$this->result = $array;
-			}
-			else
-			{
-				
-				array_map(array($this, "matchCheck"), $array);
-				
-				if(empty($this->result))
-				{
-					$this->result = false;
-				}
-			}
-		}
-		else
-		{
-			$this->result = false;
-		}
-	}
-	
-	public function matchCheck($for)
-	{
-		if($for[$this->key] == $this->val)
-		{
-			array_push($this->result,$for);
-		}
-	}
-
+//Check if the passed in array is in fact an array
+if(is_array($array))
+{
+//if it is check if the specefied key matches the value
+if($array[$this->key] == $this->val)
+{
+//if so this result is the passed in array
+$this->result = $array;
 }
-?>
+else
+{
+//other wise map the array to check each subarray for a match
+array_map(array($this, "matchCheck"), $array);
+//If the result is empty pass in false.
+$this->result = (empty($this->result)) ? false : $this->result; 
+}
+}
+}
