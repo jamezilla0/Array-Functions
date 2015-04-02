@@ -4,16 +4,20 @@
 > I will be adding more functions to this class as my ussage increases.
 
 # Constructing
-> $array = new arrayFnc();
+>
+```php
+$array = new arrayFnc();
+```
 
 #Ussage
 
 ##Search
-
 > 
 ```php
-$array->search($against,$key,$val);
+/* 
 $against = array you will search agaisnt.
 $key = which array key should we target.
 $val = what the value of the key should be.
+*/
+$array->search($against,$key,$val);
 ```
