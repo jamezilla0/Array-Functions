@@ -10,7 +10,7 @@
 $array = new arrayFnc();
 ```
 
-# Core Function's
+# Core Method's
 ```php
 	//Search and return matched array based off $key=>$value
 	public function search($array,$key,$val)
