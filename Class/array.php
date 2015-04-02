@@ -1,6 +1,7 @@
 <?php
 class arrayFnc
 {
+	//A result by default is an array
 	public $result = array();
 	
 	public function __construct()
@@ -32,11 +33,13 @@ class arrayFnc
 			}
 		}
 	}
-	
+	//Quick function to check matching current $key=>$val scope.
 	public function matchCheck($for)
 	{
+		//If a match is found
 		if($for[$this->key] == $this->val)
 		{
+			//push it to this result
 			array_push($this->result,$for);
 		}
 	}
