@@ -5,12 +5,12 @@
 
 # Constructing
 
->
+
 ```php
 $array = new arrayFnc();
 ```
 
-# Core Function
+# Core Function's
 ```php
 	//Search and return matched array based off $key=>$value
 	public function search($array,$key,$val)
@@ -39,6 +39,19 @@ $array = new arrayFnc();
 	}
 ```
 
+```php
+	//Quick function to check matching current $key=>$val scope.
+	public function matchCheck($for)
+	{
+		//If a match is found
+		if($for[$this->key] == $this->val)
+		{
+			//push it to this result
+			array_push($this->result,$for);
+		}
+	}
+```
+
 #Ussage
 
 ##Search
@@ -46,9 +59,10 @@ $array = new arrayFnc();
 >
 ```php
 /* 
+$found = what returned from array search.
 $against = array you will search agaisnt.
 $key = which array key should we target.
 $val = what the value of the key should be.
 */
-$array->search($against,$key,$val);
+$found = $array->search($against,$key,$val);
 ```
