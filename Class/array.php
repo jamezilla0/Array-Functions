@@ -18,8 +18,11 @@ class arrayFnc
 		//Check if the passed in array is in fact an array
 		if(is_array($array))
 		{
+			//We first need to check if the specefied array key exist
+			$check = (isset($array[$this->key]));
+
 			//if it is check if the specefied key matches the value
-			if($array[$this->key] == $this->val)
+			if(($array[$this->key] == $this->val) && ($check))
 			{
 			//if so this result is the passed in array
 			$this->result = $array;
