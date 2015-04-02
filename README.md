@@ -10,8 +10,10 @@
 
 ##Search
 
-> $array->search($against,$key,$val);
-
+> 
+```php
+$array->search($against,$key,$val);
 $against = array you will search agaisnt.
 $key = which array key should we target.
 $val = what the value of the key should be.
+```
