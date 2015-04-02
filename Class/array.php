@@ -22,17 +22,25 @@ class arrayFnc
 			$check = (isset($array[$this->key]));
 
 			//if it is check if the specefied key matches the value
-			if(($array[$this->key] == $this->val) && ($check))
+			if($check)
 			{
-			//if so this result is the passed in array
-			$this->result = $array;
+				if($array[$this->key] == $this->val)
+				{
+					//if so this result is the passed in array
+					$this->result = $array;
+				}
+				else
+				{
+					$goDeeper = true;
+				}
 			}
-			else
+			
+			if(isset($goDeeper))
 			{
-			//other wise map the array to check each subarray for a match
-			array_map(array($this, "matchCheck"), $array);
-			//If the result is empty pass in false.
-			$this->result = (empty($this->result)) ? false : $this->result; 
+				//other wise map the array to check each subarray for a match
+				array_map(array($this, "matchCheck"), $array);
+				//If the result is empty pass in false.
+				$this->result = (empty($this->result)) ? false : $this->result;
 			}
 		}
 	}
