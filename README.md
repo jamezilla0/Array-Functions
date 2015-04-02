@@ -1,7 +1,7 @@
 # Array-Functions
 A couple of array functions that I persornaly use when enumerating over array data. Much nicer then taking up sql resource. I use it with preloaded data, when I need to effect angular an angular scope.
 
-Constructing
+Constructing \n
 $array = new arrayFnc();
 
 Ussage
