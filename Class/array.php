@@ -30,14 +30,15 @@ class arrayFnc
 					$this->result = $array;
 				}
 				else
-				{
+				{	
+					//or we need to search deeper
 					$goDeeper = true;
 				}
 			}
-			
+			//if we are going deeper
 			if(isset($goDeeper))
 			{
-				//other wise map the array to check each subarray for a match
+				//map the array to check each subarray for a match
 				array_map(array($this, "matchCheck"), $array);
 				//If the result is empty pass in false.
 				$this->result = (empty($this->result)) ? false : $this->result;
