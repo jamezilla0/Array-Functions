@@ -56,7 +56,7 @@ class arrayFnc
 		}
 	}
 	//look for an array within an array
-	public function arrayExist($array, $in, $return = false)
+	public function exist($array, $in, $return = false)
 	{
 		$found = false;
 		//Foreach checking array existing in the $in param
