@@ -55,7 +55,7 @@ class arrayFnc
 			array_push($this->result,$for);
 		}
 	}
-		//look for an array within an array
+	//look for an array within an array
 	public function arrayExist($array, $in, $return = false)
 	{
 		$found = false;
