@@ -105,7 +105,7 @@ $array = new arrayFnc();
 ```
 #Ussage
 
-##Search
+##Search Array
 ```php
 /* 
 $found = what returned from array search;
