@@ -55,7 +55,7 @@ $array = new arrayFnc();
 ## Search through an array for pre existing array
 ```php
 	//look for an array within an array
-	public function arrayExist($array, $in, $return = false)
+	public function exist($array, $in, $return = false)
 	{
 		$found = false;
 		//Foreach checking array existing in the $in param
@@ -106,14 +106,21 @@ $array = new arrayFnc();
 #Ussage
 
 ##Search
-
->
 ```php
 /* 
-$found = what returned from array search.
-$against = array you will search agaisnt.
-$key = which array key should we target.
-$val = what the value of the key should be.
+$found = what returned from array search;
+$against = array you will search agaisnt;
+$key = which array key should we target;
+$val = what the value of the key should be;
 */
 $found = $array->search($against,$key,$val);
+```
+##Existing array
+```php
+/*
+$array  = The list we will look for inside larger container of similar arrays;
+$container = A larger list of arrays similar to $array variable;
+$return = (true) ? returns matched array : returns bool();
+*/
+$exist = $this->array->exist($array,$container,$return);
 ```
