@@ -11,6 +11,7 @@ $array = new arrayFnc();
 ```
 
 # Core Method's
+## Targeting array based off $key -> $val pair
 ```php
 	//Search and return matched array based off $key=>$value
 	public function search($array,$key,$val)
@@ -38,7 +39,7 @@ $array = new arrayFnc();
 		}
 	}
 ```
-
+## check current $key -> $val pair agasnt array;
 ```php
 	//Quick function to check matching current $key=>$val scope.
 	public function matchCheck($for)
@@ -51,7 +52,57 @@ $array = new arrayFnc();
 		}
 	}
 ```
+## Search through an array for pre existing array
+```php
+	//look for an array within an array
+	public function arrayExist($array, $in, $return = false)
+	{
+		$found = false;
+		//Foreach checking array existing in the $in param
+		foreach($in as $check)
+		{
+			//create a matched array to hold all matches
+			$matched = array();
+			//create a didnt match array to hold all missmatches
+			$didntMatch = array();
+			//foreach array passed in
+			foreach($array as $key=>$val)
+			{
+				
+				//determind if the key of this array is the same val as the key in the array we are checking against
+				$found = ($check[$key] == $val);
 
+				//if the check was valid then we found a match
+				if($found)
+				{
+					//if so push it to the matched array
+					array_push($matched, $key);
+				}
+				//if we have same number of matches as check keys
+				if(count($matched) == count($check))
+				{
+					//$found based on $return will either be checked array or remain result of the condetional at line 74
+					$found = ($return) ? $check : $found;
+					break;
+				}
+				else
+				{
+					//else we did not find anything
+					$found = false;
+				}
+					
+			}
+			//if a match was found
+			if($found)
+			{
+				//break loop and return what we asked for
+				break;
+			}
+		}
+
+		return $found;
+	}
+```
 #Ussage
 
 ##Search
